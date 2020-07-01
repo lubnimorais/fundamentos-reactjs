@@ -1,4 +1,8 @@
 const formatValue = (value: number): string =>
-  Intl.NumberFormat().format(value); // TODO
+  // local da moeda (pt-BR)
+  Intl.NumberFormat('pt-BR', {
+    currency: 'BRL', // qual moeda
+    style: 'currency', // formata para o estilo de moeda
+  }).format(value);
 
 export default formatValue;
